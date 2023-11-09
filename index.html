@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI-Cal</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header class="header" id="the_sticky_one"> <!-- untuk sticky header -->
+        <nav> <!--header-->
+            <img src="https://play-lh.googleusercontent.com/wiLKNn9tyY-SiNWg_Pib1stLmZU9lYuadq-Y4ASfi7OtJzLDmDknUFcqejQjw4Sqjg" alt="BMI Logo" class="BMI_Logo">
+            <div class="BMI_Logo"><a href="index.html">CALCULATOR</a></div>
+            <ul class="no_style">
+                <li><a href="index.html">Home</a></li>
+                <li><select class="other_product">
+                    <option selected disabled hidden>Other Products</option>
+                    <option><a href="commingSoon.html">Product 1</a></option>
+                    <option><a href="#">Product 2</a></option>
+                    <option><a href="#">Product 3</a></option>
+                </select></li>
+                <li><a href="commingSoon.html">About</a></li>
+                <li><a href="commingSoon.html">Contact</a></li>
+            </ul>
+            <!-- <button class="contact">Contact</button> -->
+        </nav>
+    </header>
+
+    <div class="content"> <!--penjelasan awal-->
+        <h2>What is BMI?</h2>
+        <p> BMI, or Body Mass Index, is a numerical value of a person's weight in relation to their height. It's a simple and commonly used method to categorize individuals into different weight status categories, such as underweight, normal weight, overweight, and obesity.</p>
+        <p>Note: Keep in mind that while BMI is a useful screening tool, it doesn't directly measure body fat and may not be accurate for everyone, especially athletes with a high muscle mass. Always consult with a healthcare professional for a comprehensive assessment of your health. If you want, I can calculate your BMI for you! Just give me your weight and height.</p>
+    </div>
+
+    <div class="BMI_form"> <!--form input-->
+        <fieldset class="BMI_input">
+            <legend>Please Input Your Data</legend>
+            <span>Gender</span><br>
+            <input class="gen" type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input class="gen" type="radio" name="gender" id="female">
+            <label for="female">Female</label><br><br>
+            
+            <span>Age</span><br>
+            <input type="number" id="age"><br><br>
+            
+            <span>Weight (Kg)</span><br>
+            <input type="number" id="weight" required placeholder="Exp. 59.5">
+            <br><br>
+
+            <span>Height (Cm)</span><br>
+            <input type="number" id="height" required placeholder="Exp. 170">
+            <br><br>
+
+            <div class="centeredButton">
+                <button id="calculate" onclick="calculate_bmi()">Calculate</button>
+                <!-- <button id="reset">Reset</button> -->
+            </div>
+        </fieldset>
+
+        <fieldset class="BMI_result"> <!--hasil-->
+            <legend>BMI Result</legend>
+            <h3 style="text-align: center;">YOUR BMI IS</h3>
+            <div id="resultContainer">0.000</div>
+            <p id="explanation"></p>
+            <p id="scrollDown"></p>
+        </fieldset>
+    </div>
+
+    <div class="risk"> <!--resiko dan tips-->
+        <h2>Risk Associated with Underweight</h2>
+        <p>
+            <ol>
+                <li><span class="bold">Nutrient Deficiencies</span>: Inadequate calorie intake may result in insufficient nutrients, leading to deficiencies in vitamins and minerals essential for overall health.</li>
+                <li><span class="bold">Weakened Immune System</span>: Malnutrition, common in underweight individuals, weakens the immune system, making the body more susceptible to infections.</li>
+                <li><span class="bold">Muscle Loss</span>: Inadequate protein intake can lead to muscle wasting and weakness, affecting physical strength and functionality.</li>
+                <li><span class="bold">Osteoporosis</span>: Insufficient weight-bearing stress on bones can result in reduced bone density, increasing the risk of fractures.</li>
+                <li><span class="bold">Fertility Issues</span>: Women with low body weight may experience irregular menstrual cycles and have an increased risk of fertility problems.</li>
+                <li><span class="bold">Anemia</span>: Underweight individuals may be at a higher risk of anemia due to a lack of essential nutrients, impacting red blood cell production.</li>
+                <li><span class="bold">Delayed Development</span>: In children and adolescents, underweight can lead to delayed physical and mental development, affecting growth and cognitive function.</li>
+                <li><span class="bold">Hormonal Imbalances</span>: Underweight individuals may experience hormonal imbalances, impacting various bodily functions, including the reproductive system.</li>
+            </ol>
+        </p>
+        <h2>Risk Associated with overweight</h2>
+        <p>
+            <ol>
+                <li><span class="bold">Cardiovascular Diseases</span>: Excess weight, especially abdominal fat, is linked to elevated levels of cholesterol and triglycerides, increasing the risk of heart disease and stroke.</li>
+                <li><span class="bold">Type 2 Diabetes</span>: Obesity is a major risk factor for insulin resistance, leading to type 2 diabetes. Adipose tissue can release substances that interfere with insulin function.</li>
+                <li><span class="bold">Joint Problems</span>: Overweight individuals may experience increased stress on weight-bearing joints, contributing to conditions like osteoarthritis.</li>
+                <li><span class="bold">Respiratory Issues</span>: Obesity can lead to respiratory problems such as sleep apnea, where excess weight may obstruct the airways during sleep.</li>
+                <li><span class="bold">Cancer</span>: Certain cancers, including breast, colon, and endometrial cancer, are more prevalent in individuals who are overweight or obese.</li>
+                <li><span class="bold">Metabolic Syndrome</span>: A cluster of conditions, including high blood pressure, high blood sugar, excess abdominal fat, and abnormal cholesterol levels, increases the risk of cardiovascular diseases and diabetes.</li>
+                <li><span class="bold">Mental Health</span>: Obesity can contribute to mental health issues, such as depression and low self-esteem, often due to societal stigma and body image concerns.</li>
+            </ol>
+        </p>
+    </div>
+
+    <div class="tips">
+        <h2>Tips for Underweight Individuals</h2>
+        <p>
+            <ol>
+                <li><span class="bold">Nutrient-Dense Diet</span>: Consume a well-balanced diet rich in nutrient-dense foods, including lean proteins, whole grains, healthy fats, fruits, and vegetables.</li>
+                <li><span class="bold">Frequent Meals</span>: Eat smaller, more frequent meals throughout the day to ensure a steady intake of calories and nutrients.</li>
+                <li><span class="bold">Protein Intake</span>: Include protein-rich foods in each meal to support muscle growth and maintenance. Sources include lean meats, dairy, eggs, legumes, and nuts.</li>
+                <li><span class="bold">Healthy Snacks</span>: Choose healthy snacks such as nuts, seeds, yogurt, and fruit to boost calorie and nutrient intake between meals.</li>
+                <li><span class="bold">Strength Training</span>: Incorporate strength training exercises to build muscle mass. Consult with a fitness professional to create a safe and effective exercise routine.</li>
+                <li><span class="bold">Limit Empty Calories</span>: Avoid relying on empty-calorie foods and sugary snacks. Focus on nutrient-dense options for optimal health.</li>
+                <li><span class="bold">Regular Health Check-ups</span>: Regularly monitor health and nutritional status with the help of healthcare professionals. Address any underlying health issues that may contribute to underweight.</li>
+                <li><span class="bold">Hydration</span>: Ensure adequate hydration, as water is essential for overall health and can support digestion and nutrient absorption.</li>
+                <li><span class="bold">Consult a Dietitian</span>: Seek guidance from a registered dietitian or healthcare professional to develop a personalized nutrition plan that meets individual needs and goals.</li>
+            </ol>
+        </p>
+        <h2>Tips for Overweight Individuals</h2>
+        <p>
+            <ol>
+                <li><span class="bold">Balanced Diet</span>: Focus on a balanced diet that includes a variety of fruits, vegetables, lean proteins, whole grains, and healthy fats. Monitor portion sizes to avoid excessive calorie intake.</li>
+                <li><span class="bold">Regular Exercise</span>: Engage in regular physical activity, incorporating both cardiovascular exercises (e.g., walking, jogging) and strength training. Aim for at least 150 minutes of moderate-intensity exercise per week.</li>
+                <li><span class="bold">Hydration</span>: Drink plenty of water throughout the day. Sometimes, the body may signal hunger when it's actually thirsty.</li>
+                <li><span class="bold">Mindful Eating</span>: Pay attention to hunger and fullness cues. Avoid eating in front of the TV or computer, as it may lead to overeating.</li>
+                <li><span class="bold">Limit Processed Foods</span>: Reduce the intake of processed foods, sugary beverages, and high-calorie snacks. Opt for whole, nutrient-dense foods.</li>
+                <li><span class="bold">Get Adequate Sleep</span>: Aim for 7-9 hours of quality sleep per night. Lack of sleep can disrupt hormones related to hunger and lead to weight gain.</li>
+                <li><span class="bold">Manage Stress</span>: Practice stress-reducing techniques such as mindfulness, meditation, or yoga. Chronic stress can contribute to overeating.</li> 
+                <li><span class="bold">Consult a Professional</span>: Seek guidance from healthcare professionals, including a registered dietitian or nutritionist, to create a personalized and sustainable weight management plan.</li>
+            </ol>
+        </p>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
