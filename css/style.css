@@ -70,10 +70,11 @@ h2{
     color: #0088a9;
 }
 
-.content, .risk, .tips{
-    padding: 10px;
-    padding-left: 20px;
+.content{
+    padding: 10px 20px;
     color: #edf0f1;
+    text-align: justify;
+
 }
 
 .sticky {
@@ -254,9 +255,18 @@ input[class="gen"] + label{
     border: 3px solid #FFB703;
     margin: 10px 20px;
     border-radius: 20px;
+    padding: 10px 5px;
+    color: #edf0f1;
+    text-align: justify;
 }
 
 .risk li, .tips li{
     margin: 8px 20px;
     text-align: justify;
+}
+
+footer, footer a{
+    text-align: center;
+    color: rgba(236, 240, 241, 0.5);
+    margin: 20px;
 }
